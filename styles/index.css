@@ -1,0 +1,118 @@
+:root {
+  /* Font sizes  */
+  --font-size-xs: 16px;
+  --font-size-body: 20px;
+  --font-size-l: 64px;
+  /* Font families  */
+  --font-primary: "Roboto", sans-serif;
+  --font-title: "Satisfy", cursive;
+  /* Spacing  */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 32px;
+  --spacing-xl: 64px;
+  /* Colors  */
+  --color-dark: #141115;
+  --color-primary: #7a5c6a;
+  --color-secondary: #beeccc;
+  --color-tertiary: #446467;
+  /* Transition  */
+  --transition-quick: all 0.2s;
+  /* Radius  */
+  --radius-soft: 2px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size-body);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+}
+
+/* Utility */
+.flex {
+  display: flex;
+}
+
+.flex-centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Layout  */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Nav styles  */
+.nav {
+  margin: 0 auto;
+  background: var(--color-primary);
+  padding: var(--spacing-s);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.nav-list-item a {
+  font-size: var(--font-size-xs);
+  margin: 0 var(--spacing-xs);
+  padding: var(--spacing-m);
+  color: white;
+  text-decoration: none;
+  transition: var(--transition-quick);
+  border-radius: var(--radius-soft);
+}
+
+.nav-list-item a:hover {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+/* Buttons  */
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+/* Hero */
+.hero__container {
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--spacing-xl) auto;
+}
+
+.title {
+  font-family: var(--font-title);
+  margin: var(--spacing-s) 0;
+  font-size: var(--font-size-l);
+}
+
+.hero-img {
+  width: 50%;
+  max-height: 700px;
+  object-fit: cover;
+  border-radius: var(--radius-soft);
+}
