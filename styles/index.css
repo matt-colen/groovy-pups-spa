@@ -23,9 +23,9 @@
   --color-dark: #1c2b32;
   --color-light: hsl(36, 1%, 100%);
   --color-primary: hsl(36, 100%, 67%);
-  --color-primary-hover: hsl(36, 90%, 77%);
+  --color-primary-hover: hsl(36, 95%, 73%);
   --color-secondary: hsl(323, 100%, 70%);
-  --color-secondary-hover: hsl(323, 100%, 60%);
+  --color-secondary-hover: hsl(323, 95%, 75%);
   /* Transition  */
   --transition-quick: all 0.2s;
   /* Radius  */
@@ -95,8 +95,9 @@ h2::after {
 
 /* Layout  */
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
+  border-radius: var(--radius-soft);
 }
 
 section {
@@ -195,6 +196,14 @@ section {
   background: var(--color-primary-hover);
 }
 
+.btn-primary--alt {
+  background: var(--color-secondary);
+}
+
+.btn-primary--alt:hover {
+  background: var(--color-secondary-hover);
+}
+
 .btn-margin {
   margin-top: var(--spacing-l);
 }
@@ -204,10 +213,16 @@ section {
   align-items: center;
   justify-content: space-between;
   margin: var(--spacing-xl) auto;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 }
 
 .hero-text__container {
   padding: var(--spacing-l) 0;
+  margin: 0 auto;
 }
 
 .hero-img {
