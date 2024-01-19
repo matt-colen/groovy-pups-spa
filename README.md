@@ -1,2 +1,3 @@
-# groovy-pups-spa
- A website for a local dog bathing and boarding business
+# Groovy Pups Spa
+
+## A website for a local dog bathing business

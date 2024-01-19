@@ -21,17 +21,22 @@
     />
     <!-- Styles  -->
     <link rel="stylesheet" href="styles/index.css" />
+    <!-- Scripts  -->
+    <script type="module" src="scripts/index.js" defer></script>
   </head>
   <body>
     <header>
       <nav class="nav">
-        <div class="container">
-          <ul class="nav-list flex">
-            <li class="nav-list-item nav-logo flex">
-              <a class="nav-list-link flex" href="index.html">
-                <img class="logo-img" src="images/logo.svg" alt="logo" />
-              </a>
-            </li>
+        <div class="nav__container flex">
+          <a class="nav-logo flex" href="index.html">
+            <img
+              class="logo"
+              src="assets/images/logo.svg"
+              alt="Groovy Pups Spa logo"
+            />
+          </a>
+          <!-- Full nav  -->
+          <ul id="nav-list-full" class="nav-list nav-list-full flex">
             <li class="nav-list-item flex">
               <a class="nav-list-link" href="index.html">Home</a>
             </li>
@@ -39,13 +44,30 @@
               <a class="nav-list-link" href="#">About</a>
             </li>
             <li class="nav-list-item flex">
-              <a class="nav-list-link" href="#">Contact</a>
+              <a class="nav-list-link" href="#">Policies</a>
+            </li>
+            <li class="nav-list-item flex">
+              <a class="nav-list-link btn btn-primary" href="#">Book Now</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile nav  -->
+        <div id="mobile-nav" class="mobile-nav flex hidden">
+          <button class="nav-close-btn" id="nav-close-btn">X</button>
+          <ul class="nav-list nav-list-mobile flex">
+            <li class="nav-list-item flex">
+              <a class="nav-list-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-list-item flex">
+              <a class="nav-list-link" href="#">About</a>
             </li>
             <li class="nav-list-item flex">
               <a class="nav-list-link" href="#">Policies</a>
             </li>
             <li class="nav-list-item flex">
-              <a class="nav-list-link btn-primary" href="#">Book now</a>
+              <a class="nav-list-link btn btn-primary btn-margin" href="#"
+                >Book Now</a
+              >
             </li>
           </ul>
         </div>
@@ -53,15 +75,20 @@
       <div class="hero__container container flex">
         <div class="hero-text__container">
           <h1 class="title">Groovy Pups Spa</h1>
-          <p class="tagline">It's time to spoil your pup with a spa day</p>
-          <a class="btn-primary btn-margin" href="#">Book now</a>
+          <p class="tagline">It's time to spoil your pup with a spa day 🐾</p>
+          <a class="btn btn-primary btn-margin" href="#">Book Now</a>
         </div>
         <img
           class="hero-img"
-          src="images/hero.jpg"
+          src="assets/images/hero.jpg"
           alt="A smiling dog getting a bath"
         />
       </div>
     </header>
+    <main>
+      <section id="bathing">
+        <h2>Bathing</h2>
+      </section>
+    </main>
   </body>
 </html>

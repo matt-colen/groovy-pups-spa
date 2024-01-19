@@ -1,32 +1,40 @@
+@font-face {
+  font-family: "Brusher";
+  src: url("../assets/fonts/Brusher.ttf");
+}
+
 :root {
   /* Font sizes  */
   --font-size-xs: 16px;
-  --font-size-body: 20px;
+  --font-size-s: 20px;
+  --font-size-m: 42px;
   --font-size-l: 64px;
   /* Font families  */
   --font-primary: "Roboto", sans-serif;
-  --font-title: "Satisfy", cursive;
+  --font-title: "Brusher", cursive;
   /* Spacing  */
   --spacing-xs: 4px;
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 32px;
   --spacing-xl: 64px;
+  --spacing-section: 86px;
   /* Colors  */
-  --color-dark: #141115;
-  --color-primary: #bf7738;
-  --color-secondary: hsl(138, 55%, 84%);
-  --color-secondary-hover: hsl(138, 65%, 74%);
-  --color-tertiary: #446467;
+  --color-dark: #1c2b32;
+  --color-light: hsl(36, 1%, 100%);
+  --color-primary: hsl(36, 100%, 67%);
+  --color-primary-hover: hsl(36, 90%, 77%);
+  --color-secondary: hsl(323, 100%, 70%);
+  --color-secondary-hover: hsl(323, 100%, 60%);
   /* Transition  */
   --transition-quick: all 0.2s;
   /* Radius  */
-  --radius-soft: 2px;
+  --radius-soft: 5px;
 }
 
 html {
   box-sizing: border-box;
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-s);
 }
 
 *,
@@ -39,7 +47,36 @@ html {
 body {
   margin: 0;
   font-family: var(--font-primary);
+  background: var(--color-light);
   color: var(--color-dark);
+}
+
+ul {
+  padding: 0;
+}
+
+/* Typography  */
+h1,
+h2 {
+  font-family: var(--font-title);
+}
+
+.title {
+  font-size: var(--font-size-l);
+}
+
+h2 {
+  font-size: var(--font-size-m);
+  text-align: center;
+  margin: var(--spacing-m) 0;
+}
+
+h2::before {
+  content: "~~~ ";
+}
+
+h2::after {
+  content: " ~~~";
 }
 
 /* Utility */
@@ -52,8 +89,8 @@ body {
   align-items: center;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.hidden {
+  display: none;
 }
 
 /* Layout  */
@@ -62,52 +99,100 @@ body {
   margin: 0 auto;
 }
 
+section {
+  margin: var(--spacing-section);
+}
+
 /* Nav styles  */
 .nav {
   margin: 0 auto;
-  background: var(--color-primary);
-  padding: var(--spacing-s);
+  padding: var(--spacing-s) 0;
+}
+
+.nav__container {
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
 }
 
 .nav-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   justify-content: flex-end;
   align-items: center;
+  gap: var(--spacing-l);
 }
 
 .nav-list-link {
   font-size: var(--font-size-xs);
-  padding: var(--spacing-m);
-  margin-left: var(--spacing-s);
-  color: white;
+  color: var(--color-dark);
   text-decoration: none;
   transition: var(--transition-quick);
   border-radius: var(--radius-soft);
 }
 
 .nav-list-link:hover {
-  background: var(--color-dark);
+  text-decoration: underline;
 }
 
-.logo-img {
-  height: 36px;
+.logo {
+  height: 130px;
+  border: 1px solid transparent;
 }
 
-/* Buttons  */
-.btn-primary {
-  display: inline-block;
-  background: var(--color-secondary);
-  color: var(--color-dark);
-  text-decoration: none;
-  border-radius: var(--radius-soft);
-  padding: var(--spacing-m) var(--spacing-l);
+.logo:hover {
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+/* Mobile nav  */
+.mobile-nav {
+  background: var(--color-tertiary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  flex-flow: column;
+}
+
+.nav-list-mobile {
+  justify-content: start;
+  flex-flow: column;
+}
+
+.nav-list-mobile .nav-list-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-close-btn {
+  border: none;
+  background: none;
+  text-align: right;
+  font-size: 22px;
+  color: var(--color-light);
+  padding: var(--spacing-l);
+  cursor: pointer;
   font-weight: bold;
 }
 
+.nav-close-btn:hover {
+  color: var(--color-primary);
+}
+
+/* Buttons  */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: var(--radius-soft);
+  padding: var(--spacing-s) var(--spacing-l);
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
 .btn-primary:hover {
-  background: var(--color-secondary-hover);
+  background: var(--color-primary-hover);
 }
 
 .btn-margin {
@@ -121,9 +206,8 @@ body {
   margin: var(--spacing-xl) auto;
 }
 
-.title {
-  font-family: var(--font-title);
-  font-size: var(--font-size-l);
+.hero-text__container {
+  padding: var(--spacing-l) 0;
 }
 
 .hero-img {
@@ -133,8 +217,25 @@ body {
   border-radius: var(--radius-soft);
 }
 
-@media only screen and (max-width: 1000px) {
+/* Bathing  */
+
+@media only screen and (max-width: 1300px) {
   .container {
     margin: var(--spacing-m);
+  }
+  .hero__container {
+    align-items: start;
+    flex-flow: column;
+    gap: var(--spacing-l);
+  }
+  .hero-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
