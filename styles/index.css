@@ -197,7 +197,6 @@ section {
 button,
 a {
   transition: var(--transition-quick);
-
 }
 
 button {
@@ -281,7 +280,9 @@ button {
   max-width: 1000px;
   padding: var(--spacing-l);
   margin: var(--spacing-l) auto;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  border-radius: var(--radius-soft);
 }
 
 .card > div {
@@ -292,12 +293,22 @@ button {
   gap: var(--spacing-m);
 }
 
-.card-list {
-  padding-left: 45px;
-}
-
 .card-list > li {
   margin: var(--spacing-s);
+}
+
+/* Information Section  */
+.card--info {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.card--info a {
+  color: var(--color-light);
+}
+
+.card--info a:hover {
+  color: var(--color-secondary);
 }
 
 /* Footer  */
