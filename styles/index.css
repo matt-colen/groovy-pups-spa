@@ -53,6 +53,7 @@ body {
 
 ul {
   padding: 0;
+  list-style-type: none;
 }
 
 /* Typography  */
@@ -123,7 +124,7 @@ section {
   padding: var(--spacing-s) 0;
 }
 
-.nav__container {
+.container--wide {
   justify-content: space-between;
   padding: 0 var(--spacing-xl);
 }
@@ -192,7 +193,13 @@ section {
   color: var(--color-primary);
 }
 
-/* Buttons  */
+/* Buttons/links */
+button,
+a {
+  transition: var(--transition-quick);
+
+}
+
 button {
   border: none;
   background: none;
@@ -293,6 +300,30 @@ button {
   margin: var(--spacing-s);
 }
 
+/* Footer  */
+footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  gap: var(--spacing-m);
+  padding: var(--spacing-m);
+}
+
+.footer-links {
+  gap: var(--spacing-m);
+}
+
+.footer-links a {
+  color: var(--color-light);
+}
+
+.footer-links a:hover {
+  color: var(--color-secondary);
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+}
+
 @media only screen and (max-width: 1000px) {
   .container {
     margin: var(--spacing-m);
@@ -306,7 +337,7 @@ button {
   .hero-img {
     width: 100%;
   }
-  .nav__container {
+  .container--wide {
     padding: var(--spacing-m);
   }
   .card {

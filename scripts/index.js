@@ -8,3 +8,7 @@ document.body.addEventListener("click", (e) => {
     handleHamBtnClick();
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("#copyright").innerHTML = `<p>&copy; Groovy Pups Spa LLC. All rights reserved | ${new Date().getFullYear()}</p>`;
+});
