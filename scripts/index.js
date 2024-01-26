@@ -10,5 +10,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#copyright").innerHTML = `<p>&copy; Groovy Pups Spa LLC. All rights reserved | ${new Date().getFullYear()}</p>`;
+  document.querySelector(
+    "#copyright"
+  ).innerHTML = `<p>&copy; Groovy Pups Spa LLC. All rights reserved | ${new Date().getFullYear()}</p>`;
 });

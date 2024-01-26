@@ -28,7 +28,7 @@
     <header>
       <nav class="nav">
         <div class="container--wide flex">
-          <a class="nav-logo flex" href="index.html">
+          <a class="flex" href="index.html">
             <img
               class="logo"
               src="assets/images/logo.svg"
@@ -38,36 +38,40 @@
           <button id="ham-btn" class="ham-btn">
             <i class="fa-solid fa-bars ham-icon"></i>
           </button>
-          <!-- Full nav  -->
-          <ul id="nav-list-desktop" class="nav-list nav-list-desktop flex">
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="index.html">Home</a>
+
+          <!-- Full Nav  -->
+          <ul id="nav-ul-desktop" class="nav-list nav-ul-desktop flex">
+            <li class="nav-li flex">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="#">About</a>
+            <li class="nav-li flex">
+              <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="#">Policies</a>
+            <li class="nav-li flex">
+              <a class="nav-link" href="#">Policies</a>
             </li>
-            <li class="nav-list-item flex">
-              <a class="nav-list-link btn btn-primary" href="#">Book Now</a>
+            <li class="nav-li flex">
+              <a class="nav-link btn btn-primary" href="#">Book Now</a>
             </li>
           </ul>
         </div>
-        <!-- Mobile nav  -->
+
+        <!-- Mobile Nav  -->
         <div id="mobile-nav" class="mobile-nav flex hidden">
-          <button id="nav-close-btn" class="nav-close-btn">X</button>
+          <button id="nav-close-btn" class="nav-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
           <ul class="nav-list nav-list-mobile flex">
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="index.html">Home</a>
+            <li class="nav-li flex">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="#">About</a>
+            <li class="nav-li flex">
+              <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-list-item flex">
-              <a class="nav-list-link" href="#">Policies</a>
+            <li class="nav-li flex">
+              <a class="nav-link" href="#">Policies</a>
             </li>
-            <li class="nav-list-item flex">
+            <li class="nav-li flex">
               <a class="btn btn-primary btn-primary--mobile btn-margin" href="#"
                 >Book Now</a
               >
@@ -75,47 +79,59 @@
           </ul>
         </div>
       </nav>
-      <div class="hero__container container flex">
+
+      <div class="container container--hero flex">
         <div class="hero-text__container">
-          <h1 class="title">Groovy Pups Spa</h1>
+          <h1>Groovy Pups Spa</h1>
           <p class="tagline">It's time to spoil your pup with a spa day 🐾</p>
-          <a class="btn btn-primary--alt btn-margin" href="#">Book Now</a>
+          <a class="btn btn--alt btn-margin" href="#">Book Now</a>
         </div>
         <img
           class="hero-img"
           src="assets/images/corgi.png"
-          alt="A smiling dog getting a bath"
+          alt="A smiling tan and white corgi"
         />
       </div>
     </header>
     <main>
-      <section id="bathing">
+      <section id="services">
         <div class="container">
           <h2>Services</h2>
           <div class="card flex">
             <div class="card-left">
-              <img src="assets/images/dog-bathing.svg" alt="" />
+              <img
+                class="services-img"
+                src="assets/images/dog-bathing.svg"
+                alt="A corgi in a tub with a beagle standing in front"
+              />
             </div>
             <div class="card-right flex flex-column">
               <h3>Bathing</h3>
               <p>We offer a variety of bathing options for your furry friend</p>
-              <ul class="card-list">
+              <ul class="ul--normal">
                 <li>Package 1 - $35</li>
                 <li>Package 2 - $35</li>
                 <li>Package 3 - $35</li>
                 <li>Package 4 - $35</li>
                 <li>Package 5 - $35</li>
               </ul>
+              <div class="card-btn">
+                <a class="btn btn-primary btn-margin" href="#">Book Now</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section>
+
+      <section id="info">
         <div class="container">
-          <h2>Information</h2>
+          <h2>Info</h2>
           <div class="card card--info flex">
             <div class="card-left">
-              <h3>Location</h3>
+              <div class="card-header flex">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <h3>Location</h3>
+              </div>
               <ul>
                 <li>
                   <p>Groovy Pups Spa LLC</p>
@@ -130,15 +146,24 @@
                   <p>(573) 416-0330</p>
                 </li>
                 <li>
-                  <p><a href="mailto:groovypupsspa@gmail.com">Email Me</a></p>
+                  <p>
+                    <a
+                      class="btn btn--alt"
+                      href="mailto:groovypupsspa@gmail.com"
+                      >Send Me An Email</a
+                    >
+                  </p>
                 </li>
               </ul>
             </div>
             <div class="card-right">
-              <h3>Hours</h3>
+              <div class="card-header flex">
+                <i class="fa-regular fa-clock"></i>
+                <h3>Hours</h3>
+              </div>
               <ul>
                 <li>
-                  <a href="#">See available times</a>
+                  <a class="btn btn--alt" href="#">See Available Times</a>
                 </li>
               </ul>
             </div>
