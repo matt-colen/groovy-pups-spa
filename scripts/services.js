@@ -21,12 +21,12 @@ export const services = [
   },
   {
     type: "add-on",
-    name: "Express Anal Glands",
-    price: 10,
+    name: "Anal Glands (external expression)",
+    price: 5,
   },
   {
     type: "add-on",
-    name: "Nail Clip & Grind",
+    name: "Nail Clip OR Grind",
     price: 10,
   },
   {

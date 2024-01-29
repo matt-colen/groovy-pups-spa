@@ -60,6 +60,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-title);
+  margin: var(--spacing-xl) 0 var(--spacing-s) 0;
 }
 
 h1 {
@@ -87,7 +88,6 @@ h3 {
 p,
 li {
   line-height: 1.5;
-  margin: var(--spacing-s) 0;
 }
 
 /* Utility */
@@ -118,6 +118,11 @@ li {
 .container--wide {
   justify-content: space-between;
   padding: 0 var(--spacing-xl);
+}
+
+.container--small {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 section {
@@ -247,6 +252,15 @@ i {
   font-size: 24px;
 }
 
+.icon-centered {
+  align-items: center;
+  gap: var(--spacing-m);
+}
+
+.fa-phone {
+  font-size: var(--font-size-xs);
+}
+
 /* Hero */
 .container--hero {
   align-items: center;
@@ -282,9 +296,9 @@ i {
   width: 50%;
 }
 
-.card-header {
-  align-items: center;
-  gap: var(--spacing-m);
+.card-left,
+.card-right {
+  justify-content: center;
 }
 
 .card-right {
@@ -311,6 +325,10 @@ footer {
   background: var(--color-dark);
   color: var(--color-light);
   padding: var(--spacing-m);
+}
+
+.footer-links {
+  gap: var(--spacing-s);
 }
 
 .footer-links a {
