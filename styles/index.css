@@ -9,6 +9,7 @@
   --font-size-s: 20px;
   --font-size-m: 42px;
   --font-size-l: 64px;
+  --font-size-h3: 32px;
   /* Font families  */
   --font-primary: "Roboto", sans-serif;
   --font-title: "Brusher", cursive;
@@ -60,7 +61,6 @@ h1,
 h2,
 h3 {
   font-family: var(--font-title);
-  margin: var(--spacing-xl) 0 var(--spacing-s) 0;
 }
 
 h1 {
@@ -70,7 +70,6 @@ h1 {
 h2 {
   font-size: var(--font-size-m);
   text-align: center;
-  margin: var(--spacing-xl) 0;
 }
 
 h2::before {
@@ -82,12 +81,20 @@ h2::after {
 }
 
 h3 {
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-h3);
 }
 
 p,
 li {
   line-height: 1.5;
+}
+
+main li {
+  margin: var(--spacing-m) 0;
+}
+
+main p {
+  margin-bottom: var(--spacing-m);
 }
 
 /* Utility */
@@ -122,7 +129,6 @@ li {
 
 .container--small {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 section {
@@ -137,13 +143,10 @@ section {
 
 .nav-link {
   font-size: var(--font-size-xs);
-  color: var(--color-dark);
-  text-decoration: none;
 }
 
 .logo {
-  height: 130px;
-  border: 1px solid transparent;
+  height: 140px;
 }
 
 /* Mobile nav  */
@@ -165,22 +168,16 @@ section {
 .mobile-nav .nav-link {
   width: 100%;
   color: var(--color-light);
-  text-align: center;
 }
 
 .nav-list-mobile {
-  justify-content: start;
   flex-flow: column;
 }
 
 .nav-close-btn {
-  border: none;
-  background: none;
   text-align: right;
-  font-size: 22px;
   color: var(--color-light);
   padding: var(--spacing-m);
-  font-weight: bold;
 }
 
 .nav-close-btn:hover {
@@ -191,7 +188,7 @@ section {
   pointer-events: none;
 }
 
-/* Buttons/links */
+/* Buttons/Links */
 button,
 a {
   transition: var(--transition-quick);
@@ -212,10 +209,12 @@ button {
 .btn {
   display: inline-block;
   padding: var(--spacing-s) var(--spacing-l);
-  text-decoration: none;
   font-weight: bold;
-  color: var(--color-dark);
   border-radius: var(--radius-soft);
+}
+
+.btn-margin {
+  margin-top: var(--spacing-l);
 }
 
 .btn--primary {
@@ -227,7 +226,6 @@ button {
 }
 
 .btn--alt {
-  margin-top: var(--spacing-l);
   background: var(--color-light);
 }
 
@@ -239,12 +237,7 @@ button {
   margin-top: var(--spacing-l);
 }
 
-.ham-btn {
-  padding: var(--spacing-s);
-}
-
 .ham-icon {
-  color: var(--color-dark);
   pointer-events: none;
 }
 
@@ -254,7 +247,11 @@ i {
 
 .icon-centered {
   align-items: center;
-  gap: var(--spacing-m);
+  gap: var(--spacing-s);
+}
+
+.icon-centered > * {
+  margin: 0;
 }
 
 .fa-phone {
@@ -286,23 +283,19 @@ i {
 /* Cards  */
 .card {
   max-width: 1200px;
-  padding: var(--spacing-l) var(--spacing-xl);
-  margin: var(--spacing-l) auto;
+  padding: var(--spacing-xl) var(--spacing-l);
+  margin: var(--spacing-xl) auto;
   border-radius: var(--radius-soft);
-  gap: var(--spacing-m);
+  gap: var(--spacing-xl);
 }
 
 .card > div {
   width: 50%;
+  display: flex;
 }
 
-.card-left,
-.card-right {
-  justify-content: center;
-}
-
-.card-right {
-  gap: var(--spacing-l);
+.card-inner {
+  margin: 0 auto;
 }
 
 /* Services Section  */
@@ -324,11 +317,11 @@ i {
 footer {
   background: var(--color-dark);
   color: var(--color-light);
-  padding: var(--spacing-m);
+  padding: var(--spacing-l) var(--spacing-m);
 }
 
 .footer-links {
-  gap: var(--spacing-s);
+  gap: var(--spacing-m);
 }
 
 .footer-links a {
@@ -351,7 +344,6 @@ footer {
     margin: var(--spacing-m);
   }
   .container--hero {
-    align-items: start;
     flex-flow: column;
     gap: var(--spacing-l);
     padding: var(--spacing-l) var(--spacing-l) 0 var(--spacing-l);
@@ -364,10 +356,7 @@ footer {
   }
   .card {
     flex-flow: column;
-    align-items: center;
-    gap: var(--spacing-xl);
-    text-align: center;
-    padding: var(--spacing-l);
+    gap: var(--spacing-l);
   }
   .card > div,
   .hero-text__container {
@@ -377,11 +366,17 @@ footer {
     padding: 0;
     list-style-type: none;
   }
-  .btn {
+  .card-inner {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     width: 100%;
-    text-align: center;
   }
-  .card-header {
+  .card-inner ul {
+    width: 100%;
+  }
+  .icon-centered {
     justify-content: center;
   }
 }
@@ -395,6 +390,9 @@ footer {
     margin: var(--spacing-l) 0;
   }
   .services-img {
+    width: 100%;
+  }
+  .btn {
     width: 100%;
   }
 }
