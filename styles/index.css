@@ -213,11 +213,11 @@ button {
   border-radius: var(--radius-soft);
 }
 
-.btn-primary {
+.btn--primary {
   background: var(--color-primary);
 }
 
-.btn-primary:hover {
+.btn--primary:hover {
   background: var(--color-primary-hover);
 }
 
@@ -285,6 +285,10 @@ i {
 .card-header {
   align-items: center;
   gap: var(--spacing-m);
+}
+
+.card-right {
+  gap: var(--spacing-l);
 }
 
 /* Services Section  */

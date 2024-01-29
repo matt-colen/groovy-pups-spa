@@ -51,7 +51,7 @@
               <a class="nav-link" href="pages/policies.html">Policies</a>
             </li>
             <li class="nav-li flex">
-              <a class="nav-link btn btn-primary" href="#">Book Now</a>
+              <a class="nav-link btn btn--primary" href="#">Book Now</a>
             </li>
           </ul>
         </div>
@@ -72,7 +72,9 @@
               <a class="nav-link" href="pages/policies.html">Policies</a>
             </li>
             <li class="nav-li flex">
-              <a class="btn btn-primary btn-primary--mobile btn-margin" href="#"
+              <a
+                class="btn btn--primary btn--primary--mobile btn-margin"
+                href="#"
                 >Book Now</a
               >
             </li>
@@ -106,17 +108,29 @@
               />
             </div>
             <div class="card-right flex flex-column">
-              <h3>Bathing</h3>
-              <p>We offer a variety of bathing options for your furry friend</p>
-              <ul class="ul--normal">
-                <li>Package 1 - $35</li>
-                <li>Package 2 - $35</li>
-                <li>Package 3 - $35</li>
-                <li>Package 4 - $35</li>
-                <li>Package 5 - $35</li>
-              </ul>
+              <div class="bathing-notes">
+                <ul>
+                  <li>
+                    We offer a variety of bathing services for your furry
+                    friends.
+                  </li>
+                  <li>
+                    <strong>Note: </strong>At this time, we only offer bathing
+                    services and not full grooms.
+                  </li>
+                </ul>
+              </div>
+              <div class="bathing">
+                <h3>Bathing</h3>
+                <ul id="bathing-prices-list" class="ul--normal"></ul>
+              </div>
+              <div class="add-ons">
+                <h3>Add-Ons</h3>
+                <ul id="add-on-prices-list" class="ul--normal"></ul>
+              </div>
+
               <div class="card-btn">
-                <a class="btn btn-primary btn-margin" href="#">Book Now</a>
+                <a class="btn btn--primary btn-margin" href="#">Book Now</a>
               </div>
             </div>
           </div>
@@ -142,28 +156,23 @@
                 <li>
                   <p>New Bloomfield, Missouri 65063</p>
                 </li>
-                <li>
-                  <p>(573) 416-0330</p>
-                </li>
-                <li>
-                  <p>
-                    <a
-                      class="btn btn--alt"
-                      href="mailto:groovypupsspa@gmail.com"
-                      >Send Me An Email</a
-                    >
-                  </p>
-                </li>
               </ul>
             </div>
             <div class="card-right">
               <div class="card-header flex">
                 <i class="fa-regular fa-clock"></i>
-                <h3>Hours</h3>
+                <h3>Contact</h3>
               </div>
               <ul>
                 <li>
-                  <a class="btn btn--alt" href="#">See Available Times</a>
+                  <p>(573) 416-0330 - Call or Text</p>
+                </li>
+                <li>
+                  <a
+                    class="btn btn--alt btn-margin"
+                    href="mailto: groovypupsspa@gmail.com"
+                    >Email Me</a
+                  >
                 </li>
               </ul>
             </div>
