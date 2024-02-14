@@ -310,6 +310,10 @@ i {
   gap: var(--spacing-s);
 }
 
+.info-link {
+  color: var(--clr-light);
+}
+
 /* Footer  */
 footer {
   background: var(--clr-dark);
