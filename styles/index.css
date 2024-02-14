@@ -115,6 +115,10 @@ main p {
   display: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* Layout  */
 .container {
   max-width: 1500px;
