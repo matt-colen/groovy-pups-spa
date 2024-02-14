@@ -23,9 +23,9 @@ const getServicesLists = (servicesArr) => {
 
   servicesArr.forEach((service) => {
     if (service.type === "bathing") {
-      bathingList += `<li>${service.name} - $${service.price}</li>`;
+      bathingList += `<li><p>${service.name} - $${service.price}</p></li>`;
     } else {
-      addOnList += `<li>${service.name} - $${service.price}</li>`;
+      addOnList += `<li><p>${service.name} - $${service.price}</p></li>`;
     }
   });
 
